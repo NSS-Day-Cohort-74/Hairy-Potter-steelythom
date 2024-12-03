@@ -1,6 +1,7 @@
 // Imports go first
 import { makePottery } from "./Potterywheel.js";
 import { firePottery } from "./kiln.js";
+import { toSellOrNotToSell } from "./PotteryCatalog.js";
 
 //variable to hold pottery
 let pottery = []
@@ -17,13 +18,10 @@ for (const pot of pottery) {
     firePottery(pot,pot.height * 1000)
 }
 
-//verify firing
-for (const pot of pottery) {
-    console.log(pot)
-}
-
 // Determine which ones should be sold, and their price
-
+for (const pot of pottery) {
+    toSellOrNotToSell(pot)
+}
 
 // Invoke the component function that renders the HTML list
 
