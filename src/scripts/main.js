@@ -2,6 +2,7 @@
 import { makePottery } from "./Potterywheel.js";
 import { firePottery } from "./kiln.js";
 import { toSellOrNotToSell } from "./PotteryCatalog.js";
+import { potteryList } from "./PotteryList.js";
 
 //variable to hold pottery
 let pottery = []
@@ -24,4 +25,6 @@ for (const pot of pottery) {
 }
 
 // Invoke the component function that renders the HTML list
-
+let potteryListHTML = potteryList();
+let potteryListElement = document.getElementById('potteryList');
+potteryListElement.innerHTML = potteryListHTML;
